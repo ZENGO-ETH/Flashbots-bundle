@@ -7,6 +7,7 @@ body {
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   min-height: 100%;
+  background-color: #CFD8DC;
 }
 
 code {
@@ -25,14 +26,21 @@ code {
   display: flex;
   justify-content: center;
   align-items: center;
+  text-align: center;
 }
 
 .app-wrapper {
   text-align: center;
+  background: transparent;
+  color: black;
+  background-color: #F48FB1;
 }
 
 .app-wrapper img {
-  width: 360px;
+  text-align: center;
+  width: 380px;
+  background: transparent;
+  color: black
 }
 
 button.app-buttons__login {
@@ -49,6 +57,8 @@ button {
   box-shadow: none;
   border: none;
   cursor: pointer;
+  background-color: #037dd6;
+  color: #fff;
 }
 
 button.app-buttons__login {

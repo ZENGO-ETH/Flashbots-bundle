@@ -1,9 +1,14 @@
+//import { ethers } from "ethers";
+import { v4 as uuidv4 } from 'uuid'
 import { useState, useEffect } from 'react';
 import Web3 from 'web3';
 
 import MetamaskLogo from './assets/metamask.svg';
 
 function App() {
+  const replacementUuid = uuidv4()
+  const NETWORK = "https://rpc-staging.flashbots.net?bundle=" + replacementUuid
+
   const [isConnected, setIsConnected] = useState(false);
   const [userInfo, setUserInfo] = useState({});
 
@@ -82,7 +87,21 @@ function App() {
   return (
     <div className="app">
       <div className="app-header">
-        <h1>React dApp authentication with Web3.js and Metamask</h1>
+        <h1> 🚀 NEAR SUDAN 🛠️ </h1>
+      </div>
+       <div className="app-wrapper">
+          <div className="app-details">
+          <center>
+            <h1>
+             flashbots-bundle 🚨
+            </h1>
+           <h5>📝 add network flashbots rpc 100 Ethereum forking mainnet use network flashbots create transaction etherscan ⬇️ 
+           </h5>
+           <p>
+           {NETWORK}
+          </p>
+        </center>
+       </div>
       </div>
       <div className="app-wrapper">
         {!isConnected && (
@@ -103,14 +122,21 @@ function App() {
               {userInfo.account}
             </div>
             <div className="app-balance">
-              <span>Balance:</span>
+              <span>💲 Balance:</span>
               {userInfo.balance}
             </div>
             <div className="app-connectionid">
-              <span>Connection ID:</span>
+              <span>🎲 Connection ID:</span>
               {userInfo.connectionid}
             </div>
           </div>
+           <div className="app-wrapper">
+            <div className="app-details">
+              <h1> 
+                Transaction
+              </h1>
+            </div>
+           </div>
           <div>
             <button className="app-buttons__logout" onClick={onDisconnect}>
               Disconnect
